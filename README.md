@@ -4,6 +4,12 @@
 
 ## 使い方
 
+このレポジトリをクローン
+
+```bash
+git clone https://github.com/ko0hi/pybotters-dealer.git --recursive
+```
+
 `apis.json`にキーを記入
 
 ```json
