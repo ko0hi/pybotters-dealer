@@ -32,7 +32,7 @@ docker-compose up -d
 
 
 ### ホストで動かす場合
-1. python環境の構築（pyenvなど）
+1. python環境の構築（pyenvなど）とnode.jsのインストール
 
 2. 依存ライブラリのインストール
 ```bash
