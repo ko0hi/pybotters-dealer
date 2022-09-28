@@ -43,7 +43,7 @@ pip install -r python/requirements.txt
 ```bash
 # /YOUR/PATH/TO/pybotters-dealer/pythonで実行
 cd python
-python -m uvicorn python:server:app --port 0.0.0.0
+PYBOTTERS_APIS=../apis.json python -m uvicorn python:server:app --port 0.0.0.0
 ```
 
 4. フロントサーバーの立ち上げ
