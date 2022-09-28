@@ -36,16 +36,6 @@ ChartJS.register(
     chartjsPluginAnnotation
 )
 
-interface Props {
-  xMax?: number
-
-  yTickFontSize?: number
-  dataLabelFontSize?: number
-
-  colorAsk?: string
-  colorBid?: string
-}
-
 const dealerStore = useDealerStore();
 const bookStore = useBookStore();
 const tradeStore = useTradeStore();
@@ -53,17 +43,6 @@ const chartStore = useBookChartStore();
 
 const hoveringPrice = ref(null);
 
-
-const props = withDefaults(defineProps<Props>(), {
-  xMax: 10,
-
-  yTickFontSize: 10,
-  dataLabelFontSize: 10,
-
-  colorAsk: "rgb(87,196,255)",
-  colorBid: "rgba(255,173,84,0.78)",
-
-})
 
 function getVolumes(vols) {
   let rtn = []
@@ -233,26 +212,12 @@ const chartOptions = computed(() => {
         grid: {
           display: chartStore.xGridDisplay
         }
-
-        // ticks: {
-        //   callback: function (value, index, values) {
-        //     return value * -1;
-        //   },
-        //   beginAtZero: true
-        // },
       },
       y1: {
         display: false,
         grid: {
           display: chartStore.yGridDisplay
         }
-
-        //   ticks: {
-        //     font: {
-        //       size: props.yTickFontSize
-        //     },
-        //   },
-        //   'position': 'right'
       }
     },
     plugins: {
