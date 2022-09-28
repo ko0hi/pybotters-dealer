@@ -1,3 +1,3 @@
 [submodule "python/pybotters-wrapper"]
 	path = python/pybotters-wrapper
-	url = git@github.com:ko0hi/pybotters-wrapper.git
+	url = https://github.com/ko0hi/pybotters-wrapper.git
