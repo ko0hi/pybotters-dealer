@@ -29,7 +29,12 @@ services:
       - type: bind
         source: ./python
         target: /opt/src/python
+      - type: bind
+        source : ./apis.json
+        target : /apis.json
     working_dir: /opt/src/python
+    environment:
+      - PYBOTTERS_APIS=/apis.json
     entrypoint: >
       python -m uvicorn server:app --host 0.0.0.0 --port 8000
 
