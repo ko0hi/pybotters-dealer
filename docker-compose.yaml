@@ -12,9 +12,9 @@ services:
       - FASTAPI_URL=http://pybotters-dealer-back:8000
     volumes:
       - type: bind
-        source: ./src
-        target: /opt/src
-    working_dir: /opt/src
+        source: ./nuxt
+        target: /opt/nuxt
+    working_dir: /opt/nuxt
     entrypoint: >
       bash -c 'yarn && yarn dev'
   back:
@@ -28,11 +28,11 @@ services:
     volumes:
       - type: bind
         source: ./python
-        target: /opt/src/python
+        target: /opt/nuxt/python
       - type: bind
         source : ./apis.json
         target : /apis.json
-    working_dir: /opt/src/python
+    working_dir: /opt/nuxt/python
     environment:
       - PYBOTTERS_APIS=/apis.json
     entrypoint: >
