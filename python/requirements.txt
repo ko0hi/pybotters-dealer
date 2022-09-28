@@ -1,0 +1,7 @@
+pybotters
+loguru
+fastapi
+uvicorn
+pandas
+numpy
+websockets
