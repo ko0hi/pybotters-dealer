@@ -22,7 +22,7 @@
 docker-compose up -d
 ```
 
-https://localhost:3000にアクセス 
+[https://localhost:3000]()にアクセス 
 
 注意
 - 立ち上がりまで数分かかる場合があります
@@ -33,16 +33,19 @@ https://localhost:3000にアクセス
 
 ### ホストで動かす場合
 1. python環境の構築（pyenvなど）
+
 2. 依存ライブラリのインストール
 ```bash
 pip install -r python/requirements.txt
 ```
+
 3. バックエンドサーバーの立ち上げ
 ```bash
 # /YOUR/PATH/TO/pybotters-dealer/pythonで実行
 cd python
 python -m uvicorn python:server:app --port 0.0.0.0
 ```
+
 4. フロントサーバーの立ち上げ
 ```bash
 cd ../nuxt
@@ -50,7 +53,8 @@ yarn
 export FASTAPI_URL=http://0.0.0.0:8000 && yarn dev
 ```
 （バックエンドサーバーも立ち上げ続けるために別のターミナルから実行する）
-5. https://localhost:3000にアクセス
+
+5. [https://localhost:3000]() にアクセス
 
 
 ## QA
