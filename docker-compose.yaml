@@ -1,0 +1,37 @@
+version: "3"
+services:
+  front:
+    build: .
+    container_name: pybotters-dealer-front
+    hostname: pybotters-dealer-front
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    environment:
+      - FASTAPI_URL=http://pybotters-dealer-back:8000
+    volumes:
+      - type: bind
+        source: ./src
+        target: /opt/src
+    working_dir: /opt/src
+    entrypoint: >
+      bash -c 'yarn && yarn dev'
+  back:
+    build: .
+    container_name: pybotters-dealer-back
+    hostname: pybotters-dealer-back
+    ports:
+      - "8000:8000"
+    expose:
+      - 8000
+    volumes:
+      - type: bind
+        source: ./python
+        target: /opt/src/python
+    working_dir: /opt/src/python
+    entrypoint: >
+      python -m uvicorn server:app --host 0.0.0.0 --port 8000
+
+#    entrypoint: >
+#      bash -c 'yarn add nuxt && yarn dev'
