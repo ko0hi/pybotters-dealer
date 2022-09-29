@@ -28,7 +28,7 @@ git clone https://github.com/ko0hi/pybotters-dealer.git --recursive
 docker-compose up -d
 ```
 
-[https://localhost:3000]()にアクセス 
+[http://localhost:3000]()にアクセス 
 
 注意
 - 立ち上がりまで数分かかる場合があります
@@ -60,7 +60,7 @@ export FASTAPI_URL=http://0.0.0.0:8000 && yarn dev
 ```
 （バックエンドサーバーも立ち上げ続けるために別のターミナルから実行する）
 
-5. [https://localhost:3000]() にアクセス
+5. [http://localhost:3000]() にアクセス
 
 
 ## QA
